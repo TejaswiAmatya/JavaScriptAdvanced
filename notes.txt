@@ -1,0 +1,8 @@
+const var1 = '10'
+const var2 = 10
+
+//true because the string 10 gets converted to numeric 10
+console.log(var1 == var2)
+
+//false becaise there is no type conversion
+console.log(var1 === var2)
