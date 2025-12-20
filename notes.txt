@@ -4,5 +4,16 @@ const var2 = 10
 //true because the string 10 gets converted to numeric 10
 console.log(var1 == var2)
 
-//false becaise there is no type conversion
+//false becaise there is no type conversion. more like reference
 console.log(var1 === var2)
+
+
+We use JSON as it is universal to all languages
+to convert javascript to json, you can simply do json.stringify(javascriptObject)
+to convert json to javascript, you can do JSON.parse(json)
+
+
+You can save something in localStorage by doing 
+localStorage.setItem("scores", JSON.stringify(score))
+
+and get JSON.parse(localStorage.getItem("scores"))
