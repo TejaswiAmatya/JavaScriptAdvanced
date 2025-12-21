@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>Todo List</p>
-    <input placeholder="Task" class="inputTask" />
-    <input type="date" class="dueDateTask" />
-    <button onClick="addTask()">Add</button>
-    <div class="taskLists"></div>
+    <div class="container">
+      <h1>Todo List</h1>
+      <div class="input-section">
+        <input placeholder="Task" class="inputTask" />
+        <input type="date" class="dueDateTask" />
+        <button onClick="addTask()" class="add-btn">Add</button>
+      </div>
+      <div class="taskLists"></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
