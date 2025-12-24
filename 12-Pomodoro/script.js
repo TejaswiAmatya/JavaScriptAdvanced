@@ -2,6 +2,9 @@ let toDoObject = [];
 let intervalId = null;
 const focusTime = 5;
 const breakTime = 2;
+let audio = new Audio("alarm.mp3");
+
+document.querySelector(".timer").innerHTML = formatTime(focusTime);
 function addTask() {
   const inputElement = document.querySelector(".inputTask");
   const name = inputElement.value;
@@ -61,6 +64,8 @@ function startTime(startTime) {
       clearInterval(intervalId);
       intervalId = null;
 
+      playSound();
+
       const statusElement = document.querySelector(".status");
       const currentStatus = statusElement.innerHTML;
       const timerElement = document.querySelector(".timer");
@@ -74,6 +79,14 @@ function startTime(startTime) {
       }
     }
   }, 1000);
+}
+
+function playSound() {
+  audio.play();
+
+  setTimeout(() => {
+    audio.pause();
+  }, 2000);
 }
 
 //this is to format time
