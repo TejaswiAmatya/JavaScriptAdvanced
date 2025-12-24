@@ -65,6 +65,7 @@ function startTime(startTime) {
       intervalId = null;
 
       playSound();
+      alert("Done");
 
       const statusElement = document.querySelector(".status");
       const currentStatus = statusElement.innerHTML;
