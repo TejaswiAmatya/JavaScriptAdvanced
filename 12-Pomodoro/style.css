@@ -12,6 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .container {
@@ -22,6 +24,27 @@ body {
   max-width: 600px;
   width: 100%;
   border: 1px solid #e0e0e0;
+}
+
+/* Pomodoro Timer Styles */
+.status {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.timer {
+  text-align: center;
+  font-size: 4rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: 30px 0;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
 }
 
 h1 {
@@ -72,16 +95,18 @@ h1 {
 }
 
 .add-btn {
-  padding: 12px 30px;
+  padding: 15px 40px;
   background: #1a1a1a;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin-top: 10px;
 }
 
 .add-btn:hover {
@@ -92,6 +117,18 @@ h1 {
 
 .add-btn:active {
   transform: translateY(0);
+}
+
+/* Add media query for side-by-side layout */
+@media (min-width: 1200px) {
+  body {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  
+  .container {
+    max-width: 500px;
+  }
 }
 
 .taskLists {
